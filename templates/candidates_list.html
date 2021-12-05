@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список кандидатов</title>
+</head>
+<body>
+<main>
+
+    <h1>Список кандидатов:</h1></br>
+
+    {% for i in candidates %}
+        <p><a href="/candidate/{{i.id}}/">{{i.name}}</a> </p>
+    {% endfor %}
+
+    <br><p> <a href="/">На главную</a> </p>
+
+</main>
+</body>
+</html>

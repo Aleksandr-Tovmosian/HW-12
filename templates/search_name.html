@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>результаты поиск</title>
+</head>
+<body>
+<main>
+    <form action="/search_n/">
+    <label for="c_name">Поиск по кандидатам<br></label>
+    <input type="text" size="30" id="c_name" name="name" placeholder="Введите имя">
+    <button>искать</button>
+    </form>
+    <h1>Найдено кандидатов: {{num_of_res}}</h1>
+    {% for name in search_name_result %}
+        <p><a href="/candidate/{{name.id}}">{{name.name}}</a></p>
+    {% endfor %}
+
+     <p> <a href="/">На главную</a> </p>
+
+</main>
+</body>
+</html>
