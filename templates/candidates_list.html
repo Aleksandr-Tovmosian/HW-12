@@ -9,11 +9,11 @@
 
     <h1>Список кандидатов:</h1></br>
 
-    {% for i in candidates %}
+    {% for i in candidates %}       <!-- цикл по кандидатам и вывод ссылки на их страницу и имя -->
         <p><a href="/candidate/{{i.id}}/">{{i.name}}</a> </p>
     {% endfor %}
 
-    <br><p> <a href="/">На главную</a> </p>
+    <br><p> <a href="/">На главную</a> </p>     <!-- ссылка на главную -->
 
 </main>
 </body>

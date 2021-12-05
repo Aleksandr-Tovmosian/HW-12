@@ -6,14 +6,15 @@
 </head>
 <body>
 <main>
-    {% for candidate in candidates %}
-    {% if candidate.id == id_ %}
+    {% for candidate in candidates %}   <!-- запускаем цикл по кандидатам -->
+    {% if candidate.id == id_ %}        <!-- если id совпадает, то заполняем данные кандидата -->
         <h1>{{candidate.name}}</h1>
         <p>{{candidate.position}}</p>
         <img src="{{candidate.picture}}" width=200/>
         <p>{{candidate.skills}}</p>
     {% endif %}
     {% endfor %}
+    <br><p> <a href="/">На главную</a> </p>
 </main>
 
 </body>

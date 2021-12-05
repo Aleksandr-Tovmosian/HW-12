@@ -6,17 +6,17 @@
 </head>
 <body>
 <main>
-    <form action="/search_n/">
+    <form action="/search_n/">      <!-- форма для повторного поиска -->
     <label for="c_name">Поиск по кандидатам<br></label>
     <input type="text" size="30" id="c_name" name="name" placeholder="Введите имя">
     <button>искать</button>
     </form>
-    <h1>Найдено кандидатов: {{num_of_res}}</h1>
+    <h1>Найдено кандидатов: {{num_of_res}}</h1>     <!-- цикл по кандидатам и вывод ссылок на них -->
     {% for name in search_name_result %}
         <p><a href="/candidate/{{name.id}}">{{name.name}}</a></p>
     {% endfor %}
 
-     <p> <a href="/">На главную</a> </p>
+     <p> <a href="/">На главную</a> </p>        <!-- ссылка на главную -->
 
 </main>
 </body>
